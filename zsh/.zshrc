@@ -85,3 +85,15 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export GOPATH=$HOME/workspace/go
+
+# start the agent automatically and make sure that only one ssh-agent process
+# runs at a time
+if ! pgrep -u $USER ssh-agent > /dev/null; then
+  ssh-agent > ~/.ssh-agent-thing
+fi
+if [[ "$SSH_AGENT_PID" == "" ]]; then
+  eval $(<~/.ssh-agent-thing) > /dev/null
+fi
+
+# rustup
+source ~/.cargo/env
