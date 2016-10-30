@@ -51,7 +51,7 @@ ZSH_THEME="bureau"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git archlinux docker gpg-agent gradle mvn)
+plugins=(git archlinux autojump docker gpg-agent gradle mvn)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -97,3 +97,5 @@ fi
 
 # rustup
 source ~/.cargo/env
+
+export JAVA_HOME=/usr/lib/jvm/default-runtime
