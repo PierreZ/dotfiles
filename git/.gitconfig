@@ -1,0 +1,6 @@
+[user]
+	email = contact@pierrezemb.fr
+	name = Pierre Zemb
+
+[url "git@github.com:"]
+  insteadOf = gh:
