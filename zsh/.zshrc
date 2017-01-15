@@ -1,13 +1,17 @@
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/pierre/.oh-my-zsh
+export ZSH=/home/pierre/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="bureau"
+#ZSH_THEME="bureau"
+ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -94,8 +98,5 @@ fi
 if [[ "$SSH_AGENT_PID" == "" ]]; then
   eval $(<~/.ssh-agent-thing) > /dev/null
 fi
-
-# rustup
-source ~/.cargo/env
 
 export JAVA_HOME=/usr/lib/jvm/default-runtime
