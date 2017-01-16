@@ -5,6 +5,5 @@
 
 [url "git@github.com:"]
   insteadOf = gh:
-
-[alias]
-  commit = commit -S
+[commit]
+	gpgsign = true
