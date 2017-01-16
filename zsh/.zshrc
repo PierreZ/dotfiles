@@ -1,6 +1,3 @@
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-export LANGUAGE=en_US.UTF-8
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -55,7 +52,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git archlinux autojump docker gpg-agent gradle mvn zsh-autosuggestions)
+plugins=(git archlinux autojump docker gpg-agent gradle mvn zsh-autosuggestions docker-compose)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -87,8 +84,6 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-export GOPATH=$HOME/workspace/go
 
 # start the agent automatically and make sure that only one ssh-agent process
 # runs at a time
