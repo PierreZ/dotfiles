@@ -97,3 +97,30 @@ fi
 export JAVA_HOME=/usr/lib/jvm/default-runtime
 
 eval "$(direnv hook zsh)"
+
+# GO prompt
+prompt_zsh_go_version() {
+  if [[ -n "$GOPATH" ]]; then
+    local go_version
+    go_version=$(go version 2>/dev/null | sed -E "s/.*(go[0-9.]*).*/\1/")
+
+    if [[ -n "$go_version" ]]; then
+      "$1_prompt_segment" "$0" "$2" "green" "255" "$go_version"
+    fi
+  fi
+}
+
+# Print Rust version number
+prompt_zsh_rust_version() {
+  if [  -f $PWD/Cargo.toml ]; then
+    local rust_version
+    rust_version=$(rustc --version 2>&1 | grep -oe "^rustc\s*[^ ]*" | grep -o '[0-9.a-z\\\-]*$')
+
+    if [[ -n "$rust_version" ]]; then
+      "$1_prompt_segment" "$0" "$2" "208" "$DEFAULT_COLOR" "Rust $rust_version" 'RUST_ICON'
+    fi
+  fi
+}
+
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(root_indicator context dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(zsh_go_version zsh_rust_version status)
