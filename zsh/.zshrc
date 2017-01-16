@@ -52,7 +52,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git archlinux autojump docker gpg-agent gradle mvn zsh-autosuggestions docker-compose)
+plugins=(git archlinux autojump docker gpg-agent gradle mvn zsh-autosuggestions docker-compose rust)
 
 source $ZSH/oh-my-zsh.sh
 
