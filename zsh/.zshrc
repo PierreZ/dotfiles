@@ -100,3 +100,5 @@ if [[ "$SSH_AGENT_PID" == "" ]]; then
 fi
 
 export JAVA_HOME=/usr/lib/jvm/default-runtime
+
+eval "$(direnv hook zsh)"
