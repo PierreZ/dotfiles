@@ -143,5 +143,5 @@ fi
 }
 
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(root_indicator context dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(zsh_go_version zsh_java_version zsh_node_version zsh_rust_version status)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(root_indicator context dir)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vcs zsh_go_version zsh_java_version zsh_node_version zsh_rust_version status)
