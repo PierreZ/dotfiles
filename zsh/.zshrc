@@ -100,19 +100,19 @@ eval "$(direnv hook zsh)"
 
 # GO prompt
 prompt_zsh_go_version() {
-  if [[ -n "$GOPATH" ]]; then
+  if [[ $PWD == *"/go"* ]]; then
     local go_version
     go_version=$(go version 2>/dev/null | sed -E "s/.*(go[0-9.]*).*/\1/")
 
     if [[ -n "$go_version" ]]; then
-      "$1_prompt_segment" "$0" "$2" "green" "255" "$go_version"
+      "$1_prompt_segment" "$0" "$2" "green" "255" "$go_version" 'GO_ICON'
     fi
   fi
 }
 
 # Print Rust version number
 prompt_zsh_rust_version() {
-  if [  -f $PWD/Cargo.toml ]; then
+  if [[ $PWD == *"/rust"* ]]; then
     local rust_version
     rust_version=$(rustc --version 2>&1 | grep -oe "^rustc\s*[^ ]*" | grep -o '[0-9.a-z\\\-]*$')
 
@@ -122,5 +122,26 @@ prompt_zsh_rust_version() {
   fi
 }
 
+# Node version
+prompt_zsh_node_version() {
+  if [[ $PWD == *"/nodejs"* ]]; then
+  local node_version=$(node -v 2>/dev/null)
+  [[ -z "${node_version}" ]] && return
+
+  "$1_prompt_segment" "$0" "$2" "green" "white" "${node_version:1}" 'NODE_ICON'
+fi
+}
+
+# Node version
+prompt_zsh_java_version() {
+  if [[ $PWD == *"/java"* ]]; then
+  local javac_version=$(javac -version 2>&1)
+  [[ -z "${javac_version}" ]] && return
+
+  "$1_prompt_segment" "$0" "$2" "red" "white" "${javac_version}" 'JAVA_ICON'
+fi
+}
+
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(root_indicator context dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(zsh_go_version zsh_rust_version status)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(zsh_go_version zsh_java_version zsh_node_version zsh_rust_version status)
