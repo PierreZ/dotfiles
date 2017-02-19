@@ -1,6 +1,7 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$PATH:/home/pierre/.cargo/bin
 
+source /home/pierre/.zshenv
 # Path to your oh-my-zsh installation.
 export ZSH=/home/pierre/.oh-my-zsh
 
@@ -63,12 +64,7 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='mvim'
-fi
+export EDITOR='vim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -84,15 +80,6 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# start the agent automatically and make sure that only one ssh-agent process
-# runs at a time
-if ! pgrep -u $USER ssh-agent > /dev/null; then
-  ssh-agent > ~/.ssh-agent-thing
-fi
-if [[ "$SSH_AGENT_PID" == "" ]]; then
-  eval $(<~/.ssh-agent-thing) > /dev/null
-fi
 
 export JAVA_HOME=/usr/lib/jvm/default-runtime
 
