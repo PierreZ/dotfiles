@@ -53,7 +53,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git archlinux autojump docker gpg-agent gradle mvn zsh-autosuggestions docker-compose rust)
+plugins=(git archlinux autojump docker gpg-agent gradle mvn zsh-autosuggestions docker-compose rust pip virtualenv python)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -87,7 +87,9 @@ eval "$(direnv hook zsh)"
 
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(root_indicator context dir)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vcs status)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vcs virtualenv status)
 
 export GOPATH=/home/pierre/workspace/personal/go
 export PATH=$PATH:$GOPATH/bin
+export JAVA_HOME=/usr/lib/jvm/default
+export PATH=/home/pierre/.local/bin:$PATH
