@@ -2,6 +2,7 @@
 export PATH=$PATH:/home/pierre/.cargo/bin
 
 source /home/pierre/.zshenv
+source "/home/pierre/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
 # Path to your oh-my-zsh installation.
 export ZSH=/home/pierre/.oh-my-zsh
 
@@ -9,7 +10,7 @@ export ZSH=/home/pierre/.oh-my-zsh
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="bureau"
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="spaceship"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -93,3 +94,41 @@ export GOPATH=/home/pierre/workspace/personal/go
 export PATH=$PATH:$GOPATH/bin
 export JAVA_HOME=/usr/lib/jvm/default
 export PATH=/home/pierre/.local/bin:$PATH
+export PATH=$PATH:/home/pierre/.gem/ruby/2.4.0/bin
+
+
+
+SPACESHIP_PROMPT_ORDER=(
+  time          # Time stampts section
+  user          # Username section
+  host          # Hostname section
+  dir           # Current directory section
+  git           # Git section (git_branch + git_status)
+  hg            # Mercurial section (hg_branch  + hg_status)
+  package       # Package version
+  node          # Node.js section
+  ruby          # Ruby section
+  elixir        # Elixir section
+  xcode         # Xcode section
+  swift         # Swift section
+  golang        # Go section
+  php           # PHP section
+  rust          # Rust section
+  haskell       # Haskell Stack section
+  julia         # Julia section
+  docker        # Docker section
+  aws           # Amazon Web Services section
+  venv          # virtualenv section
+  conda         # conda virtualenv section
+  pyenv         # Pyenv section
+  dotnet        # .NET section
+  ember         # Ember.js section
+  kubecontext   # Kubectl context section
+  exec_time     # Execution time
+  line_sep      # Line break
+#  battery       # Battery level and status
+  vi_mode       # Vi-mode indicator
+  jobs          # Backgound jobs indicator
+  exit_code     # Exit code section
+  char          # Prompt character
+)
