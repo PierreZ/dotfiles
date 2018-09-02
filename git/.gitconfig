@@ -1,7 +1,7 @@
 [user]
 	email = contact@pierrezemb.fr
 	name = Pierre Zemb
-	signingkey = 3E0175B45AFFC7E5 
+	signingkey = 43F150C4
 
 [url "git@github.com:"]
   insteadOf = gh:
@@ -16,11 +16,3 @@
 	refactor = "!f() { [[ -z \"$GIT_PREFIX\" ]] || cd \"$GIT_PREFIX\" && if [[ -z $1 ]]; then git commit -m \"refactor: \" -e; else git commit -m \"refactor: $1\"; fi }; f"
 	style = "!f() { [[ -z \"$GIT_PREFIX\" ]] || cd \"$GIT_PREFIX\" && if [[ -z $1 ]]; then git commit -m \"style: \" -e; else git commit -m \"style: $1\"; fi }; f"
 	test = "!f() { [[ -z \"$GIT_PREFIX\" ]] || cd \"$GIT_PREFIX\" && if [[ -z $1 ]]; then git commit -m \"test: \" -e; else git commit -m \"test: $1\"; fi }; f"
-	change = codereview change
-	gofmt = codereview gofmt
-	mail = codereview mail
-	pending = codereview pending
-	submit = codereview submit
-	sync = codereview sync
-[http]
-	cookiefile = /home/pierre/.gitcookies
