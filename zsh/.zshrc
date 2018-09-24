@@ -102,3 +102,13 @@ eval "$(direnv hook zsh)"
 
 # GPG
 export GPG_TTY=$(tty)
+
+
+# go stuff
+export GOPATH=$HOME/workspace/go
+
+
+# exa
+alias e='exa -l --git'
+
+export PATH=$PATH:/home/pierrez/.cargo/bin
