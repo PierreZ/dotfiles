@@ -110,5 +110,7 @@ export GOPATH=$HOME/workspace/go
 
 # exa
 alias e='exa -l --git'
+alias cat='bat'
 
 export PATH=$PATH:/home/pierrez/.cargo/bin
+export PATH=$PATH:/home/pierrez/workspace/go/bin
