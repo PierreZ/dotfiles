@@ -68,7 +68,17 @@ ZSH_THEME="spaceship"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+  dnf
+  git
+  gradle
+  mvn
+  sudo
+  vscode
+  kubectl
+  docker
+  autojump
+  )
 
 source $ZSH/oh-my-zsh.sh
 
@@ -97,3 +107,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+eval "$(direnv hook zsh)"
+
+export JAVA_HOME=$(readlink -f /usr/bin/java | cut -d/ -f1-6)
+export GOPATH=$HOME/workspace/go/gopath
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
