@@ -1,7 +1,7 @@
 [user]
 	email = contact@pierrezemb.fr
 	name = Pierre Zemb
-	signingkey = 5497B94B
+	signingkey = B9BBCF6E
 
 [url "git@github.com:"]
   insteadOf = gh:
