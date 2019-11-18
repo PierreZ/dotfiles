@@ -115,3 +115,11 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+gentoo_prefix () {
+    /home/pierrez/gentoo/startprefix
+}
+
+start_zsh () {
+    /home/pierrez/gentoo/bin/zsh
+}

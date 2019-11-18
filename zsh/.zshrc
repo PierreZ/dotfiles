@@ -70,7 +70,6 @@ ZSH_THEME="spaceship"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   ubuntu
-  apt
   git
   gradle
   mvn
@@ -79,7 +78,7 @@ plugins=(
   kubectl
   docker
   autojump
-  )
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -112,7 +111,12 @@ source $ZSH/oh-my-zsh.sh
 eval "$(direnv hook zsh)"
 
 export JAVA_HOME=$(readlink -f /usr/bin/java | cut -d/ -f1-6)
-export GOPATH=$HOME/workspace/go/gopath
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+# Add cargo bin
+export PATH="$PATH:$HOME/.cargo/bin"
+
+# Add snap bin
+export PATH="$PATH:/snap/bin"
