@@ -1,3 +1,6 @@
-~dev-lang/go
-~www-apps/hugo
-~net-libs/nodejs
+dev-lang/go
+www-apps/hugo
+net-libs/nodejs
+sys-apps/exa
+sys-apps/bat
+ys-apps/ripgrep
