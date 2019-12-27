@@ -115,11 +115,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-gentoo_prefix () {
-    /home/pierrez/gentoo/startprefix
-}
-
-start_zsh () {
-    /home/pierrez/gentoo/bin/zsh
-}
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/pierrez/.sdkman"
+[[ -s "/home/pierrez/.sdkman/bin/sdkman-init.sh" ]] && source "/home/pierrez/.sdkman/bin/sdkman-init.sh"
