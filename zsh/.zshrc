@@ -122,9 +122,5 @@ export PATH="$PATH:$GOPATH/bin"
 
 # Add snap bin
 export PATH="$PATH:/snap/bin"
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/pierrez/.sdkman"
-[[ -s "/home/pierrez/.sdkman/bin/sdkman-init.sh" ]] && source "/home/pierrez/.sdkman/bin/sdkman-init.sh"
-
 
 alias e='exa -lah --git'
