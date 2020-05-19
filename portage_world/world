@@ -1,2 +1,8 @@
 app-portage/prefix-toolkit
 app-shells/zsh
+dev-lang/go
+dev-vcs/git
+net-libs/nodejs
+net-misc/curl
+sys-apps/exa
+www-apps/hugo

@@ -110,3 +110,10 @@ source $ZSH/oh-my-zsh.sh
 
 eval "$(direnv hook zsh)"
 
+alias k="kubectl"
+
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/pierrez/.sdkman"
+[[ -s "/home/pierrez/.sdkman/bin/sdkman-init.sh" ]] && source "/home/pierrez/.sdkman/bin/sdkman-init.sh"
+export JAVA_HOME=/usr/lib/jvm/adoptopenjdk-13-hotspot-amd64
