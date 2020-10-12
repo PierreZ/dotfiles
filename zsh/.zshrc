@@ -8,7 +8,7 @@ export ZSH="/home/pierrez/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="spaceship"
+ZSH_THEME="agnoster"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -112,8 +112,8 @@ eval "$(direnv hook zsh)"
 
 alias k="kubectl"
 
+eval "$(starship init zsh)"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/pierrez/.sdkman"
 [[ -s "/home/pierrez/.sdkman/bin/sdkman-init.sh" ]] && source "/home/pierrez/.sdkman/bin/sdkman-init.sh"
-export JAVA_HOME=/usr/lib/jvm/adoptopenjdk-13-hotspot-amd64
