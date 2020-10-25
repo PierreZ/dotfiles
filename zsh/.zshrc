@@ -107,13 +107,3 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-eval "$(direnv hook zsh)"
-
-alias k="kubectl"
-
-eval "$(starship init zsh)"
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/pierrez/.sdkman"
-[[ -s "/home/pierrez/.sdkman/bin/sdkman-init.sh" ]] && source "/home/pierrez/.sdkman/bin/sdkman-init.sh"
